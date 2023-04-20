@@ -91,7 +91,7 @@ class Decoder:
         for i in range(len(res)):
             out_name = self.session.get_outputs()[i].name
             if out_name == "masks":
-                mask = res[i] > self.mask_threshold
+                mask = (res[i] > self.mask_threshold).astype(np.int32)
                 result_dict[out_name] = mask
             else:
                 result_dict[out_name] = res[i]
