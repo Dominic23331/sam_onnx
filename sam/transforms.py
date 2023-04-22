@@ -1,7 +1,6 @@
 from typing import Tuple
 from copy import deepcopy
 
-import cv2
 import numpy as np
 
 
