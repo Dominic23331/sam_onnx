@@ -34,6 +34,7 @@ class Decoder:
         else:
             raise ValueError("Invalid device, please use 'cuda' or 'cpu' device.")
 
+        print("loading decoder model...")
         self.session = ort.InferenceSession(model_path,
                                             opt,
                                             providers=provider,

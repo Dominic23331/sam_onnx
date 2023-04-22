@@ -40,6 +40,14 @@ im0 = img.copy()
 get_first_box_point = False
 
 
+def change_box(box):
+    x1 = min(box[0], box[2])
+    y1 = min(box[1], box[3])
+    x2 = max(box[0], box[2])
+    y2 = max(box[1], box[3])
+    return [x1, y1, x2, y2]
+
+
 def draw_circle(event, x, y, flags, param):
     global img, get_first_box_point, box_point
     if event == cv2.EVENT_LBUTTONDOWN and not get_first_box_point:
@@ -71,6 +79,7 @@ def draw_circle(event, x, y, flags, param):
         else:
             box_point.append(x)
             box_point.append(y)
+            box_point = change_box(box_point)
             boxes.append(box_point)
             print("add box:", box_point)
 

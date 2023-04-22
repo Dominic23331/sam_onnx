@@ -29,6 +29,7 @@ class Vit:
         else:
             raise ValueError("Invalid device, please use 'cuda' or 'cpu' device.")
 
+        print("loading vit model...")
         self.session = ort.InferenceSession(model_path,
                                             opt,
                                             providers=provider,
