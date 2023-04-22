@@ -62,7 +62,7 @@ python .\inference.py --img .\images\dog.jpg --warmup 0 --output test.jpg
 
 ​	--output: 输出图像位置
 
-在运行inference.py后，首先使用vit对图像进行特征提取，当提取图像特征以后，则弹出窗口显示图像，此时，可使用鼠标左键在图像上点击，或使用鼠标右键对图像点击，绘制矩形框，此时会将采集的prompt输入decoder，进行分割。
+在运行inference.py后，首先使用vit对图像进行特征提取，当提取图像特征以后，则弹出窗口显示图像，此时，可使用鼠标左键在图像上点击，或使用鼠标右键对图像点击，绘制矩形框，此时会将采集的prompt输入decoder，进行分割。当分割完成后，点击键盘s键则可保存到输出图像位置。
 
 ## 效果
 
